@@ -1,0 +1,325 @@
+/* =================== Reset + Dark Netflix Style =================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    scroll-behavior: smooth;
+  }
+  
+  /* =================== Header =================== */
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+  }
+  
+  header h1 {
+    color: #e50914;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.1em;
+    color: #ccc;
+  }
+  
+  /* =================== Profile Grid =================== */
+  .profile-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* This allows wrapping on small screens */
+    padding: 2rem;
+    text-align: center;
+  }
+
+  
+  .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  }
+  
+  .card-wrapper h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  }
+
+  .card.small-card {
+    display: block;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #222;
+    transition: transform 0.3s ease;
+  }
+  
+  .card.small-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card.small-card:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: 600px) {
+    .card-container {
+      width: 90vw;
+    }
+  
+    .card {
+      height: 40vw;
+    }
+  
+    .card-title {
+      font-size: 0.95rem;
+    }
+  }
+  .about-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #e50914;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .project {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  .project a {
+    color: #e50914;
+    text-decoration: none;
+  }
+  
+  /* =================== Footer =================== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    font-size: 0.9em;
+    color: #aaa;
+  }
+  
+  /* =================== Netflix Hero =================== */
+  .netflix-hero {
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-size: 400% 400%;
+    animation: heroGradient 15s ease infinite;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px; /* Adjusted to remove extra space at the top */
+  }
+  
+  @keyframes heroGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.25; /* You can adjust this */
+  }
+
+
+  .netflix-logo {
+    padding-top:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .netflix-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+    background: linear-gradient(#141414, #141414) padding-box,
+                linear-gradient(45deg, #e50914, #ff6666) border-box;
+    border: 5px solid transparent;
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .netflix-photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(229, 9, 20, 0.7);
+  }
+  
+  .netflix-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+    color: #e50914;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: scaleY(1.1);
+    transition: opacity 1.5s ease-in-out, transform 1s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+  .netflix-ALSname {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    color: #e50914;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0;
+    cursor: pointer;
+    transform: scaleY(1.1);
+    transition: opacity 1.5s ease-in-out, transform 1s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+
+  .netflix-ALSname.zoom {
+    transform: scale(5);
+    opacity: 0;
+  } 
+
+  body.loaded .netflix-name, .netflix-ALSname {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+  
+  .netflix-name, .netflix-ALSname :hover {
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7), 0 0 20px rgba(229, 9, 20, 0.5);
+  }
+  
+  .netflix-tagline {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ccc;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.5s ease, transform 1.2s ease;
+  }
+  
+  body.loaded .netflix-tagline {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* =================== Typewriter Tagline =================== */
+  .typewriter-text {
+    font-family: monospace;
+    color: #ccc;
+    overflow: hidden;
+    border-right: 2px solid #e50914;
+    white-space: nowrap;
+    width: 0;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: typing 6s steps(40, end) forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #e50914; }
+  }
+  .typewriter2-text {
+    font-family: monospace;
+    color:rgba(204, 9, 9, 0.8);
+    overflow: hidden;
+    border-right: 2px solid #e50914;
+    white-space: nowrap;
+    width: 0;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    animation-delay: 4s;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #e50914; }
+
+  }
+  /* =================== Scroll Arrow =================== */
+  .scroll-down {
+    font-size: 2rem;
+    color: #e50914;
+    animation: bounce 2s infinite;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  
+  /* =================== Fade In Zoom (Legacy Unused) =================== */
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* =================== Responsive =================== */
+  @media (max-width: 768px) {
+    .netflix-name {
+      font-size: 3rem;
+    }
+  
+    .netflix-photo {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+
+  
+  .containerin h1.zoom {
+    transform: scale(5);
+    opacity: 0;
+  }
