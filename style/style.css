@@ -323,3 +323,205 @@ body {
     transform: scale(5);
     opacity: 0;
   }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pages{
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: fixed; /* Instead of sticky */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(20, 20, 20, 0.4); /* Transparent dark */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    transition: background-color 0.3s ease;
+  }
+
+.navbar.scrolled {
+  background-color: rgba(20, 20, 20, 0.95); /* Solid dark background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+/* Left side: logo + nav links */
+.left-nav {
+display: flex;
+align-items: center;
+gap: 40px;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: red;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 1rem;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #b3b3b3;
+}
+
+/* Profile Image */
+.profile-pic img {
+width: 40px;
+height: 40px;
+object-fit: cover;
+border-radius: 10px; /* <-- curved corners instead of full circle */
+border: 2px solid white;
+}
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 0;
+  }
+
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  .loading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  .dots::after {
+    content: '';
+    display: inline-block;
+    animation: dots 1.5s steps(4, end) infinite;
+  }
+
+  @keyframes dots {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+  }
+
+  .btn-play {
+    background-color: white;
+    color: black;
+  }
+
+  .btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+  }
+
+  /* Section Styling */
+  .section {
+    padding: 20px 50px;
+  }
+
+  .section {
+    padding: 2rem;
+    color: white;
+  }
+  
+  .card-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+.card {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  
+}
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.5); /* Transparent dark overlay */
+    z-index: 1;
+  }
+  
+  .card-text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: #e50914; /* Netflix red */
+    z-index: 2;
+  }

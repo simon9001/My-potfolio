@@ -4,177 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simon Gatungo | Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #141414;
-      font-family: Arial, sans-serif;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: rgba(20, 20, 20, 0.95);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-}
-
-/* Left side: logo + nav links */
-.left-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: red;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #b3b3b3;
-}
-
-/* Profile Image */
-.profile-pic img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 10px; /* <-- curved corners instead of full circle */
-  border: 2px solid white;
-}
-    /* Hero Section */
-    .hero {
-      height: 90vh;
-      background-image: url('../filesdox/Simon%20Pass.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to top, rgba(20, 20, 20, 1) 10%, rgba(20, 20, 20, 0));
-    }
-
-    .hero-content {
-      position: absolute;
-      bottom: 50px;
-      left: 50px;
-      z-index: 2;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-content p {
-      max-width: 500px;
-      margin-bottom: 20px;
-    }
-
-    .hero-content button {
-      padding: 10px 20px;
-      margin-right: 10px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn-play {
-      background-color: white;
-      color: black;
-    }
-
-    .btn-info {
-      background-color: rgba(109, 109, 110, 0.7);
-      color: white;
-    }
-
-    /* Section Styling */
-    .section {
-      padding: 20px 50px;
-    }
-
-    .section h2 {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-    }
-
-    .card-row {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      scroll-behavior: smooth;
-    }
-
-    .card {
-      flex: 0 0 auto;
-      width: 200px;
-      position: relative;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 5px;
-      height: 120px;
-      object-fit: cover;
-    }
-
-    .progress-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 5px;
-      background-color: red;
-      width: 60%;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    /* Scrollbar */
-    .card-row::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .card-row::-webkit-scrollbar-thumb {
-      background: #444;
-      border-radius: 4px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="..\style\style.css"/>
 </head>
-<body>
+<body class="pages">
 
 <!-- Navbar -->
 <header class="navbar">
@@ -192,57 +24,61 @@
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Simon: The Journey</h1>
-      <p>Witness the inspiring story of a passionate tech visionary blending AI, AR, and love to shape the future.</p>
-      <button class="btn-play">▶ Play</button>
-      <button class="btn-info">ℹ More Info</button>
+  <div class="hero">
+    <video autoplay muted loop>
+      <source src="../filesdox\cinematic computer coding video(1080P_HD).mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay">
+      <div class="loading">Loading<span class="dots"></span></div>
     </div>
-  </section>
+  </div>
 
-  <!-- Today's Picks -->
-  <section class="section" id="projects">
-    <h2>Today's Picks for You</h2>
-    <div class="card-row">
-      <div class="card"><img src="../filesdox/Simon%20Pass.jpg" alt="Pick 1"></div>
-      <div class="card"><img src="https://via.placeholder.com/200x120?text=EaseHealth" alt="Pick 2"></div>
-      <div class="card"><img src="https://via.placeholder.com/200x120?text=AR+LMS" alt="Pick 3"></div>
-      <div class="card"><img src="https://via.placeholder.com/200x120?text=Voting+System" alt="Pick 4"></div>
+<!-- Today's Picks -->
+<section class="section" id="projects">
+  <h2>Today's Top Picks for stalker</h2>
+  <div class="card-row">
+    <div class="card">
+      <img src="../filesdox/Simon%20Pass.jpg" alt="Pick 1">
+      <div class="card-text">Recommendations</div>
     </div>
-  </section>
-
-  <!-- Continue Watching -->
-  <section class="section">
-    <h2>Continue Watching</h2>
-    <div class="card-row">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x120?text=Simon+1" alt="Continue 1">
-        <div class="progress-bar"></div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/200x120?text=Simon+2" alt="Continue 2">
-        <div class="progress-bar" style="width: 40%;"></div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/200x120?text=Simon+3" alt="Continue 3">
-        <div class="progress-bar" style="width: 80%;"></div>
-      </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Contact" alt="Pick 2">
+      <div class="card-text">Contact Me</div>
     </div>
-  </section>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Projects" alt="Pick 3">
+      <div class="card-text">Projects</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Experience" alt="Pick 4">
+      <div class="card-text">Experience</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Certifications" alt="Pick 5">
+      <div class="card-text">Certifications</div>
+    </div>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section class="section" id="about">
-    <h2>About Simon</h2>
-    <p>Simon Wanyoike Gatungo is a passionate software developer, innovator, and IT professional currently pursuing BSc. Information Technology at the University of Embu. He builds systems that solve real-world problems using AI, AR, and modern web technologies.</p>
-  </section>
-
-  <!-- Hire Me Section -->
-  <section class="section" id="hireme">
-    <h2>Hire Me</h2>
-    <p>Need a skilled developer to join your team or work on your next big idea? Simon is available for internships, freelance projects, and full-time engagements. Let’s build the future together.</p>
-  </section>
-
-</body>
-</html>
+<!-- Continue Watching -->
+<section class="section">
+  <h2>Continue Watching for stalker</h2>
+  <div class="card-row">
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Reading" alt="Continue 1">
+      <div class="progress-bar" style="width: 30%;"></div>
+      <div class="card-text">Reading</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Blogs" alt="Continue 2">
+      <div class="progress-bar" style="width: 60%;"></div>
+      <div class="card-text">Blogs</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/220x120?text=Contact+Me" alt="Continue 3">
+      <div class="progress-bar" style="width: 80%;"></div>
+      <div class="card-text">Contact Me</div>
+    </div>
+  </div>
+</section>
