@@ -350,12 +350,9 @@ body {
     align-items: center;
     padding: 15px 50px;
     transition: background-color 0.3s ease;
+    backdrop-filter: blur(4px);
   }
 
-.navbar.scrolled {
-  background-color: rgba(20, 20, 20, 0.95); /* Solid dark background */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
 /* Left side: logo + nav links */
 .left-nav {
 display: flex;
@@ -364,6 +361,7 @@ gap: 40px;
 }
 
 .logo {
+border: 5px;;
 font-size: 1.8rem;
 font-weight: bold;
 color: red;
@@ -398,7 +396,7 @@ border: 2px solid white;
   /* Hero Section */
   .hero {
     position: relative;
-    height: 100vh;
+    height: 75vh;
     overflow: hidden;
     width: 100%;
     margin: 0;
@@ -425,7 +423,7 @@ border: 2px solid white;
   }
 
   .loading {
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
@@ -456,33 +454,49 @@ border: 2px solid white;
   }
 
   /* Section Styling */
-  .section {
-    padding: 20px 50px;
-  }
 
   .section {
-    padding: 2rem;
+    padding: 50rem;
     color: white;
+    padding: 20px 50px;
+    white-space: nowrap;
   }
   
   .card-row {
+    padding-top: 20px;
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+  }
+
+  .card-row::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .card-row::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
   }
   
-.card {
-  position: relative;
-  width: 320px;
-  height: 220px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: #000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
-}
+  .card {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
+  }
+  
 
 .card:hover {
   transform: scale(1.08);
