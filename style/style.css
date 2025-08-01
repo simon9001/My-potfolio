@@ -29,9 +29,10 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap; /* This allows wrapping on small screens */
+    flex-wrap: nowrap;
     padding: 2rem;
     text-align: center;
+    opacity: 300;
   }
 
   
@@ -349,8 +350,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    transition: background-color 0.3s ease;
-    backdrop-filter: blur(4px);
   }
 
 /* Left side: logo + nav links */
@@ -367,6 +366,8 @@ font-weight: bold;
 color: red;
 text-transform: uppercase;
 letter-spacing: 1px;
+text-decoration: none;  
+cursor: pointer;
 }
 
 .nav-links {
