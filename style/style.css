@@ -29,7 +29,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 2rem;
     text-align: center;
   }
@@ -218,6 +218,21 @@ body {
   
   .netflix-name, .netflix-ALSname :hover {
     text-shadow: 0 0 10px rgba(229, 9, 20, 0.7), 0 0 20px rgba(229, 9, 20, 0.5);
+  }
+  @media (max-width: 600px) {
+    .netflix-photo {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .netflix-ALSname {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+  
+    .netflix-name {
+      font-size: 0.8rem;
+    }
   }
   
   .netflix-tagline {
