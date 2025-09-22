@@ -103,18 +103,13 @@ I'm open to collaboration, internships, freelance gigs, mentorship, and innovati
 
 ---
 
-## 🏆 Acknowledgments
+##  Acknowledgments
 
-- 💼 **PLP (Presidential Digital Talent Program)** – For the amazing opportunity
-- 🎬 Netflix – For the design inspiration
-- 🙏 Everyone who believed in this vision and gave feedback during the hackathon
-
----
-
-## 📜 License
-
-This project is open-sourced under the [MIT License](LICENSE)
+- 💼 **PLP** – For the amazing opportunity
+-  Netflix – For the design inspiration
+-  Everyone who believed in this vision and gave feedback during the hackathon
 
 ---
+
 
 **Built with passion and purpose by SK – because your story deserves more than just a PDF.**

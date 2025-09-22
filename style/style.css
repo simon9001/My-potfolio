@@ -125,7 +125,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6); 
     background-size: 400% 400%;
     animation: heroGradient 15s ease infinite;
-    height: 100vh;
+    min-height: 100vh;     
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -140,6 +140,14 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+  /* Make hero fill viewport on desktops/laptops */
+@media (min-width: 1024px) {
+  .netflix-hero {
+    height: 100vh;       /* lock to viewport height */
+    min-height: 100vh;   /* guarantee full screen */
+    padding: 0;          /* reset extra space */
+  }
+}
   .link-wrapper {
     text-decoration: none;
     color: inherit;
@@ -873,3 +881,49 @@ border: 2px solid white;
     .play-button:hover {
       background-color: #b0060f;
     }
+
+
+
+    /* Phones (up to 480px) */
+@media (max-width: 480px) {
+  .netflix-ALSname {
+      margin-top: 70px;
+    font-size: 1.5rem;   /* Smaller name */
+    letter-spacing: 1px;
+  }
+
+  .typewriter-text,
+  .typewriter2-text {
+    font-size: 0.9rem;
+    white-space: normal;  /* Allow wrapping */
+  }
+
+  .netflix-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    max-width: 90%; /* Keeps text inside screen */
+  }
+
+  .section {
+    padding: 20px; 
+    white-space: normal; /* text wraps */
+  }
+}
+
+/* Tablets (481px–768px) */
+@media (max-width: 768px) {
+  .netflix-ALSname {
+    font-size: 2.5rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
