@@ -177,6 +177,7 @@ body {
   .netflix-photo {
     width: 200px;
     height: 200px;
+    cursor: pointer;
     border-radius: 50%;
     object-fit: cover;
     padding: 4px;
@@ -926,4 +927,60 @@ border: 2px solid white;
   .hero-content h1 {
     font-size: 2.2rem;
   }
+}
+
+
+@keyframes zoomOutFade {
+  0% {
+    transform: scale(1);
+    color: #e50914; /* Netflix red */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5); /* zoom */
+    color: #e50914; /* stays red */
+    opacity: 0;     /* fades away */
+  }
+}
+
+.netflix-ALSname.animate {
+  animation: zoomOutFade 4.2s forwards;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  background: #222;
+  padding: 10px;
+  border: 3px solid red;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background: #333;
+}
+
+.player {
+  background: lime;
+}
+
+.end {
+  background: gold;
+}
+
+.trap {
+  background: #333; /* hidden trap (looks normal) */
+}
+
+.trap.revealed {
+  background: crimson; /* shown only on collision */
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 20px;
 }
