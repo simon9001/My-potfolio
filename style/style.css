@@ -141,13 +141,6 @@ body {
     100% { background-position: 0% 50%; }
   }
   /* Make hero fill viewport on desktops/laptops */
-@media (min-width: 1024px) {
-  .netflix-hero {
-    height: 100vh;       /* lock to viewport height */
-    min-height: 100vh;   /* guarantee full screen */
-    padding: 0;          /* reset extra space */
-  }
-}
   .link-wrapper {
     text-decoration: none;
     color: inherit;

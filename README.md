@@ -27,7 +27,7 @@ I didn’t want a basic resume site. I wanted to **wow**, to stand out, and to g
 
 - **HTML5** – For structured, semantic web content  
 - **CSS3** – For layout, responsiveness, and Netflix-inspired styling  
-- **Zero JavaScript** – Lean and lightweight  
+- **JavaScript** – Lean and lightweight  
 - **Mobile-First** – Fully responsive on all screens  
 
 ---
